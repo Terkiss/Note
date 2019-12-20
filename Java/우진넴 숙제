@@ -1,0 +1,25 @@
+원피스보기, 던파, 딸ㅋ
+
+
+class Name -> PeekabooList
+
+변수 이름 ->
+        자료 저장 변수  Data
+         뚝배기 변수  private Head 시작 주소 == a[0];
+         사이즈 변수 Count
+
+
+함수 이름 
+
+        equal(a, b) 비교 함수 같으면 0,
+                    a가 크면 -1 ,
+                    b가 크면 +1
+        add(data) 입력 데이터를 리스트에 저장
+        remove(index) 인덱스를 이용 해당 번쨰의 데이터를 삭제
+
+        removeAll() 모든 데이터 삭제 
+        size() 사이즈 출력
+        resize(length) 해당 길이 만큼 리스트를 리사이즈 
+        get(index) 해당 인덱스의 데이터를 출력
+        get() 리스트내 모든 데이터 출력 
+         
