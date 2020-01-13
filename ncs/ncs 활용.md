@@ -80,7 +80,8 @@
 
 ### 1. 열거체 
     열거체는 괄호 안에 연속적인 값이 들어가는 자료형 이다. 특정
-    값을 넣어 주지 않으면 1식 늘어나기 떄문에 상수 배열이라고 부르기도 한다.
+    값을 넣어 주지 않으면 1식 늘어나기 떄문에 상수 배열이라고 
+    부르기도 한다.
 
 
 <img src ="https://github.com/Terkiss/Note/blob/master/image/38.PNG?raw=true" width = "480" height = "272"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
