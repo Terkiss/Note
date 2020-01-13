@@ -155,13 +155,24 @@ AB/CD*E/- (후위 표기법) (후배위아님)
 
 정수타입
 byte = 1byte 
+
 short = 2byte
+
 int = 4byte
+
 long = 8byte
+
 실수타입
+
 float = 4byte
+
 double = 8byte
+
 문자 타입
 char = 1byte
+
 참과 거짓
+
 blooean = 1byte
+
+
