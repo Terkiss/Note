@@ -75,16 +75,16 @@
 
 ## 사용자 정의 자료형 
 사용자 정의 자료형의 개요
-    C/C++ , JAVA 같은 프로그래밍 언어에서는 산용자가 직접 자료형을 만드는것이 가능 
+    C/C++ , JAVA 같은 프로그래밍 언어에서는 산용자가 직접<br> 자료형을 만드는것이 가능 
 
 ### 1. 열거체 
-    열거체는 괄호 안에 연속적인 값이 들어가는 자료형 이다. 특정 값을 넣어 주지 않으면 1식 늘어나기 떄문에 상수 배열이라고 부르기도 한다.
+    열거체는 괄호 안에 연속적인 값이 들어가는 자료형 이다. 특정 <br>값을 넣어 주지 않으면 1식 늘어나기 떄문에 상수 배열이라고 부르기도 한다.
 
 
 <img src ="https://github.com/Terkiss/Note/blob/master/image/38.PNG?raw=true" width = "480" height = "272"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
 
-### 2. 구조체
-    구조체는 괄호 안에 멤버 변수를 사용하는 자료형이다. 내부에 멤버 변수 자료형을 마음 대로 선언 할수 있으며, 멤버 함수의 작성도 가능
+### 2. 구조체 - 시험X
+    구조체는 괄호 안에 멤버 변수를 사용하는 자료형이다. 내부에 멤버<br> 변수 자료형을 마음 대로 선언 할수 있으며, 멤버 함수의 작성도 가능
 <img src ="https://github.com/Terkiss/Note/blob/master/image/39.PNG?raw=true" width = "480" height = "272"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
 
 
