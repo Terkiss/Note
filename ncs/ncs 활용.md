@@ -1,3 +1,5 @@
+# [목록으로돌아가기](https://github.com/Terkiss/Note/blob/master/%EB%AA%A9%EB%A1%9D.md)
+
 # 프로그래밍 언어 활용
 
 ## 변수의 유형
@@ -189,7 +191,7 @@
             가장 상위에 위치한 노드
         -3. 레벨(Level)
             근노드를 기준으로 특정 노드 까지의 경로 길이
-            
+
 
     
 
