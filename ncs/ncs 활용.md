@@ -1,5 +1,20 @@
 # [목록으로돌아가기](https://github.com/Terkiss/Note/blob/master/%EB%AA%A9%EB%A1%9D.md)
 
+
+
+
+
+[알고리즘](https://github.com/Terkiss/Note/blob/master/Java/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+
+[싱글톤](https://github.com/Terkiss/Note/blob/master/Java/%EC%8B%B1%EA%B8%80%ED%86%A4.md)
+
+[라이브러리](https://github.com/Terkiss/Note/blob/master/Java/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC.md)
+
+
+
+
+
+
 # 프로그래밍 언어 활용
 
 ## 변수의 유형
