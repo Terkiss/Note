@@ -1,5 +1,4 @@
-원피스보기, 던파, 딸ㅋ
-
+소워, 딸ㅋ, 잠
 
 class Name -> PeekabooList
 
@@ -22,4 +21,8 @@ class Name -> PeekabooList
         resize(length) 해당 길이 만큼 리스트를 리사이즈 
         get(index) 해당 인덱스의 데이터를 출력
         get() 리스트내 모든 데이터 출력 
+
+
+        6장 -.> >>>>>>>>>>>>>>>>>>>> 오버로딩
+        10장 
          
