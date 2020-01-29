@@ -18,6 +18,7 @@ public class VipCustomer extends Customer
     {
         bonusPoint += price * bonusPoint;
 
-        return price  (int)(price*saleRatio)
+        //return price  (int)(price*saleRatio)
+        return 0;
     }
 }
