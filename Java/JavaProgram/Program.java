@@ -55,8 +55,6 @@ class RemoteControl_Example
         rc.setVolume(1515);
         rc.turnOFF();
 
-
-        
     }
 }
 
