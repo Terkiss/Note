@@ -15,4 +15,80 @@ abstract
             
             각서브 클래스에서 구체적 행위 구현
 
-astract  
+abstract class Calculator
+{
+    
+}
+
+문제의 상황
+    주민 번호 이름 저장 -> void addPersonalInfo(...)
+    주민번호 이용 검색 -> String searchName(...)
+
+약속
+abstract class PersonalNumberStorage
+{
+    public abstract void addPersonalInfo(...);
+    public abstract String searchName(...);
+}
+
+결과
+public static void main(...)
+{
+    PersonalNumberStorage storage = new (a 사가 구현한 크래스 이름)
+    storage.addPersonalInfo(...)
+    Storage.searchName(...) // 이러한 연결 고리
+
+}
+
+ppt 14p
+
+모든 메소드가 abstract로 선언된 클래스는 interface로 정의가 가능하다!
+
+인터페이스는 자체적인 메소드를 못가짐 -> 가질수 있게 됨
+
+인터페이스 내에 선언된 변수는 무조건 public static final로 선언됨
+
+인터페이스 내에 선언된 메소드는 무조건 public abstract로 선언됨
+
+인터페이스도 참조 변수 선언 가능하고 메소드 오버라이딩 원칙 그대로 적용
+
+
+
+interface의 활용
+
+윈도우 -> 프린터 1, 프린터 2 , 프린터 3 ,프린터 4
+
+implements : 구현 하다.
+
+interface가 상속 할경우
+    구현 하지 않고 그대로 부모를 가져옴
+
+    extends 가 interface에서 나올수 있는 경우는 좌측값 과 우측값이 interface 일경우에 한함
+
+interface 특성
+    상속과 구현 동시에 가능
+    둘 이상의 인터페이스 구현 가능
+
+자바의 인터페이스 
+    interface const
+
+public interface Car
+{
+    int MAXIMUM_SPEED = 260;  // static final 생략
+    int moveHandle(int degred);  // abstract public 생략
+    int changeGear(int gear); // abstract public 생략
+}
+
+
+
+인터페이스 요소
+    디폴트 메소드 와 정적 메소드 
+        인터페이스를 구현한 여러 클래스에서 사용할 메서드가 클래스마다 같은 기능을 제공하는 경우가 있습니다.
+
+        인터페이스에서 정적 메소드를 쓸수 있다.
+        정적 메소드를 작성시에 쓸 private 메소드도 만들수 있다.
+        
+
+
+
+
