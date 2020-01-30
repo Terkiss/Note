@@ -20,11 +20,11 @@ public class FriendInfoHandler
     public void addfriend(int choice)
     {
         String name, phoneNum, addr, job, major;
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in, "euc-kr");
 
 
         Jprint.print("이름 : ");
-        name = sc.next();
+        name = sc.nextLine();
 
         Jprint.print("전화 : ");
         phoneNum = sc.next();
