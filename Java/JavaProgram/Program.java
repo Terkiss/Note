@@ -3,10 +3,13 @@ import polymorphism.*;
 
 import java.util.Scanner;
 
+import anoymous.Anonymous;
 import friend_ex.FriendInfoHandler;
 import innerclass.InerClass;
 import interface_ex.*;
 import myprintf.Jprint;
+import anoymous.*;
+
 
 // 다형성 
 public class Program {
@@ -27,9 +30,12 @@ public class Program {
         // MyFriendInfoBook my = new MyFriendInfoBook();
         // my.run();
 
-        InerClass a = new InerClass();
-        
+       // InerClass a = new InerClass();
 
+        
+        //AnonymousExaple a = new AnonymousExaple();
+        RemoteControl_Example a = new RemoteControl_Example();
+        a.run();
     }
 
     public void mpveAnimal(Animal ani) {
@@ -98,5 +104,42 @@ class MyFriendInfoBook {
 
             }
         }
+    }
+}
+
+
+
+
+
+class AnonymousExaple
+{
+    public AnonymousExaple()
+    {
+
+    }
+
+
+    public void Run()
+    {
+        Anonymous anony = new Anonymous();
+
+        anony.field.wake();
+
+        anony.methods();
+        anony.methods2(
+            new Person()
+            {
+                void Study()
+                {
+                    System.out.print("공부 합니다. \n");
+                }
+
+                public void wake()
+                {
+                    System.out.println("8시에 일어 납니다");
+                    Study();
+                }
+            }
+        );
     }
 }
