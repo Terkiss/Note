@@ -40,13 +40,13 @@
 
 -[12.장]
 
--[13.장](https://github.com/Terkiss/Note/blob/master/Java/Note/13장%20클래스의%20상속%201-상속의%20기본.md)13장 클래스의 상속 1-상속의 기본
+-[13.장](https://github.com/Terkiss/Note/blob/master/Java/Note/13장%20클래스의%20상속%201-상속의%20기본.md) 13장 클래스의 상속 1-상속의 기본
 
--[14.장](https://github.com/Terkiss/Note/blob/master/Java/Note/14장%20클래스의%20상속%202%20-%20오버라이딩.md)14장 클래스의 상속 2 - 오버라이딩
+-[14.장](https://github.com/Terkiss/Note/blob/master/Java/Note/14장%20클래스의%20상속%202%20-%20오버라이딩.md)  14장 클래스의 상속 2 - 오버라이딩
 
--[15.장](https://github.com/Terkiss/Note/blob/master/Java/Note/15장%20클래스의%20상속3%20-%20상속의%20목적.md)15장 클래스의 상속3 - 상속의 목적
+-[15.장](https://github.com/Terkiss/Note/blob/master/Java/Note/15장%20클래스의%20상속3%20-%20상속의%20목적.md)  15장 클래스의 상속3 - 상속의 목적
 
--[16.장](https://github.com/Terkiss/Note/blob/master/Java/Note/16장%20abstract와%20interface%20그리고%20inner%20class.md)16장 abstract와 interface 그리고 inner class
+-[16.장](https://github.com/Terkiss/Note/blob/master/Java/Note/16장%20abstract와%20interface%20그리고%20inner%20class.md)   16장 abstract와 interface 그리고 inner class
 
 # NCS 활용
 -[NCS활용](https://github.com/Terkiss/Note/blob/master/ncs/ncs%20%ED%99%9C%EC%9A%A9.md) NCS 활용
