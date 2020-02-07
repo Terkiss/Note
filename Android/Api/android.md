@@ -1,3 +1,5 @@
+# getSystemService(Context.LAYOUT_INFLATER_SERVICE)
+
 # startActivityForResult(Intent intent, int Code );
 
 # protected  void  onActivityResult(int requstCode, int resultCode, Intent data)
