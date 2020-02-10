@@ -34,8 +34,12 @@ public class Program {
 
         
         //AnonymousExaple a = new AnonymousExaple();
-        RemoteControl_Example a = new RemoteControl_Example();
-        a.run();
+        // 리모트 컨트롤러
+        //RemoteControl_Example a = new RemoteControl_Example();
+        //a.run();
+
+
+        
     }
 
     public void mpveAnimal(Animal ani) {
