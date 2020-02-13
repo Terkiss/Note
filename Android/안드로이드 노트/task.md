@@ -1,3 +1,4 @@
+https://codechacha.com/ko/android-explicit-implicit-intent/
 * 엑티비티 매니저가 가진 엑티비티 스택 정보 보기 
 adb shell dumpsys activity activities > activity
 
@@ -22,3 +23,19 @@ singleTop
 싱글탑 항시적용
  FLAG_ACTIVITY_SINGGLE_TOP
  분기를 통해 싱글탑 적용
+
+
+
+
+
+ noHistory 액티비티 속성과
+ FLAG_ACTIVITY_NO_HISTORY
+    중간 과정을 냄기고 싶지 않다면 플래그 사용
+
+
+
+Intent.FLAG_ACTIVITY_CLEAR_TASK
+작업대 청소
+
+FLAG_ACTIVITY_CLEAR_TOP
+보낼건 없고 처음부터 리셋
