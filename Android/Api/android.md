@@ -94,8 +94,7 @@
     HARDWARE_PROPERTIES_SERVICE ("hardware_properties")
     A HardwarePropertiesManager for accessing hardware properties.
 
-# startActivity(Start)
-    새로운 액티비티 실행 합니다.
+
 
 
 # startActivityForResult(Intent intent, int Code );
