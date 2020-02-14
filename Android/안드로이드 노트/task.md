@@ -23,7 +23,9 @@ singleTop
 싱글탑 항시적용
  FLAG_ACTIVITY_SINGGLE_TOP
  분기를 통해 싱글탑 적용
-
+ 
+ 디버그 텍스트의 랜치모드가 1이면 singletop 0이면 standard
+ 싱글탑 같은 경우 재사용 목적이 강함
 
 
 
