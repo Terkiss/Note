@@ -14,6 +14,7 @@ Intent.FLAG_ACTIVITY_NEW_TASK
     Intent.FLAG_ACTIVITY_MULTIPLE_TASK
 
 액티비티 실행모드
+중복을 허용하지 않는 경우 무족건 재사용
 standard
     호출 을 맘대로 해도 다 받아줌
     단 리소를 많이 쓴다.
@@ -28,12 +29,17 @@ singleTop
  싱글탑 같은 경우 재사용 목적이 강함
 
 
+singTask
+
+
+singleInstance
+독립적으로 태스크 생성 누구도 붙을수 없다
 
 
  noHistory 액티비티 속성과
  FLAG_ACTIVITY_NO_HISTORY
     중간 과정을 냄기고 싶지 않다면 플래그 사용
-
+    나이 자취를 남기고 싶지 않을떄 사용
 
 
 Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -41,3 +47,17 @@ Intent.FLAG_ACTIVITY_CLEAR_TASK
 
 FLAG_ACTIVITY_CLEAR_TOP
 보낼건 없고 처음부터 리셋
+
+
+FLAG_ACTIVITY_CLEAR_TOP
+FLAG_ACITIVITY_SINGLE_TOP
+싱글 태스크랑 동치
+
+
+FLAG_ACTIVITY_REORDER_TO_FRONT
+    goto 문과 같이 엑티비티의 흐름을 변경 할수 있다.
+    흐름을 변경-> 재사용의 순서로 동작
+
+
+finishOnCloseSystemDialog
+요즘은 잘안됨
