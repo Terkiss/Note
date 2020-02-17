@@ -43,10 +43,12 @@ singleInstance
 
 
 Intent.FLAG_ACTIVITY_CLEAR_TASK
-작업대 청소
+작업대 청소 생성한 태스크만 남음
 
 FLAG_ACTIVITY_CLEAR_TOP
 보낼건 없고 처음부터 리셋
+A1 -> A2 -> A3 ----->A2
+동일한 A2 액티비티와 상위 액티비티 제거
 
 
 FLAG_ACTIVITY_CLEAR_TOP
@@ -57,7 +59,34 @@ FLAG_ACITIVITY_SINGLE_TOP
 FLAG_ACTIVITY_REORDER_TO_FRONT
     goto 문과 같이 엑티비티의 흐름을 변경 할수 있다.
     흐름을 변경-> 재사용의 순서로 동작
-
+    A1 -> A2 -> A3 ------> A2      ,, 1
+    A1 -> A3 -> A2
 
 finishOnCloseSystemDialog
 요즘은 잘안됨
+
+FLAG_ACTIVITY_TASK_ON_HOME
+지우는 듯한 효과를 낼떄 싸용
+
+
+
+FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+    다른 명령을 따로 주지 않으면 실행안함
+
+    clearTaskOnLaunch 액티비티 속성 사용시 
+    테스크를 비움
+    해당 속성은 루트 액티비티에만 사용가눙
+    홈에서 실행할떄 사용하는 카테고리
+    맨처음 실행할떄 쓰는 액션
+
+    finishOnTaskLaunch 속성
+        finishOnTaskLaunch 속성은 noHistory 와 비슷
+
+    FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET
+
+
+    allowTaskReparenting
+    달아주고 홈버튼 누루면
+    부모를 바꾼다 B 로붙이고 홈을 누르면 A으로 겨쳄
+
+
