@@ -99,6 +99,8 @@
 
 # startActivityForResult(Intent intent, int Code );
 
+#intent.setClassName(package, packName);
+
 # protected  void  onActivityResult(int requstCode, int resultCode, Intent data)
     액티비티가 종료되면 호출되는 콜백 메소드
 
