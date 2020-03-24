@@ -44,4 +44,28 @@ public boolean equals(Object obj)
 
 public String toString()
     객체의 정보를 문자열로 반환하는 메소드
+
+public int hashCode()
+    JVM 메모리에 저장된 객체 고유의 값 즉 해시  값을 반환하는 메소드다.
+
+protected Object clone()
+    객체를 복사 새로운 객체 반환
+
+protect void finalize()
+    사용하지 않는 메모리를 청소하는 가지비 컬렉터에 의해서 호출되는 메소드
+
+public Class getClass()
+     객체에서 클래스를 받아올 떄 사용하는 메소드
+    
+public void notify()
+    대기중인 스레드를 시작 함
+
+public void notifyAll()
+    대기중인 모든 스레드를 시작 한다. 
+
+public void wait()
+    현재의 스레드가 동작하는 모든 일을 멈추고 대기상태로 만든다 . 
+
+
+
     
