@@ -64,6 +64,9 @@
                                 파이어 베이스의 프로젝트 명으로 지정
                                     인증 Oauth 클라이언트 지정
 
+            리더 보드 클릭
+                리더 보드 생성
+
 
 # 8. Unity
 
@@ -81,4 +84,21 @@
 
 
 
+
+# 9. Firebase Console
+
+    프로젝트 설정 내앱-> 디지털 지문 추가(자세한건 아래 클릭)
+    
+  </br><img src ="https://github.com/Terkiss/Note/blob/master/image/80.PNG?raw=true" width = "720" height = "480"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
+
+    저장이 끝난 후 sdk 설정 및 구성에서 새로운 google -service.json을 받아서 Unity내의 Asset폴더에 넣어준다.
+
+
+
+# 10. Unity
+
+    [Google Play Games plugin for Unity] -- 매뉴얼 
+    https://github.com/playgameservices/play-games-plugin-for-unity
+
+    Windows -> google game play -> setup -> android setup 
 
