@@ -77,7 +77,7 @@
 ## KeyStore 지문 확인
   keytool -list -v -keystore 경로를 포함한 키스토어파일명
   </br>
-<img src ="https://github.com/Terkiss/Note/blob/master/image/80.PNG?raw=true" width = "480" height = "270"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
+<img src ="https://github.com/Terkiss/Note/blob/master/image/80.PNG?raw=true" width = "720" height = "480"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
 
 
 
