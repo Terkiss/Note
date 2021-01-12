@@ -62,6 +62,22 @@
                         사용자 인증 정보 추가
                             유형 게임서버 선택
                                 파이어 베이스의 프로젝트 명으로 지정
-                                    인증 Oauth 클라이언트 지정 
+                                    인증 Oauth 클라이언트 지정
+
+
+# 8. Unity
+
+## KeyStore 파일 생성
+    File -> Build Settings -> Android -> Player Settings ->
+    Publishing Settings -> keyStore Manager -> keystore Custom ->
+    Create now -> anywere -> 적절한 위치와 암호 지정 -> KeyStore Check On ->
+    암호 입력 
+
+
+## KeyStore 지문 확인
+  keytool -list -v -keystore 경로를 포함한 키스토어파일명
+<img src ="https://github.com/Terkiss/Note/blob/master/image/80.PNG?raw=true" width = "480" height = "270"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
+
+
 
 
