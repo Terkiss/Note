@@ -100,5 +100,22 @@
     [Google Play Games plugin for Unity] -- 매뉴얼 
     https://github.com/playgameservices/play-games-plugin-for-unity
 
-    Windows -> google game play -> setup -> android setup 
+    Windows -> google game play -> setup -> android setup ->
+    google play console 의 리더보드 resource를 가져와서 붙여넣기 ->
+    클라이언트 id 입력 
+
+    자세한 내용은 아래 사진 참조 
+    
+  </br><img src ="https://github.com/Terkiss/Note/blob/master/image/81.PNG?raw=true" width = "720" height = "480"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
+
+    
+    64비트 빌드 il2cpp 로 빌드해야함 
+
+
+
+
+// ps
+
+ 구글 플레이 콘솔의 앱서명 인증서 지문이랑
+ firebase 콘솔 인증서 지문이랑 같아야 버그가 안생김
 
