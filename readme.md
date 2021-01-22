@@ -25,8 +25,28 @@
 
 * [12-1.장](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/12%EC%9E%A5.1%20%EC%9D%B8%ED%85%90%ED%8A%B8%20%ED%95%84%ED%84%B0%20%EC%95%A1%EC%85%98.md) 인텐트 필터 액션
 
-* [12-1.장](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/13%EC%9E%A5%20%EB%A6%AC%EC%82%AC%EC%9D%B4%ED%81%B4%EB%9F%AC%20%EB%B7%B0.md) 리사이클러뷰
+* [13.장](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/13%EC%9E%A5%20%EB%A6%AC%EC%82%AC%EC%9D%B4%ED%81%B4%EB%9F%AC%20%EB%B7%B0.md) 리사이클러뷰
 
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/AlartDialog.md) AlartDialog
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/Dependency) Dependency
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/MultiMedia.md) MultiMedia
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%8A%A4.md) 데이터 베이스
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/%EC%8A%A4%EB%A0%88%EB%93%9C.md) 스레드
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/AlartDialog.md) AlartDialog
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/AlartDialog.md) AlartDialog
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/AlartDialog.md) AlartDialog
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/AlartDialog.md) AlartDialog
+
+* [번외](https://github.com/Terkiss/Note/blob/master/Android/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%85%B8%ED%8A%B8/AlartDialog.md) AlartDialog
 
 # Java
 -[1.장]
@@ -112,4 +132,9 @@
 -[3.장]
 
 -[4.장]
+
+
+
+# Unity Game Meth
+
 
