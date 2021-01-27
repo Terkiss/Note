@@ -1,0 +1,26 @@
+		void LoadArena()
+		{
+			if ( ! PhotonNetwork.IsMasterClient )
+			{
+				Debug.LogError( "PhotonNetwork : Trying to Load a level but we are not the master Client" );
+			}
+
+			Debug.LogFormat( "PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount );
+
+			PhotonNetwork.LoadLevel("PunBasics-Room for "+PhotonNetwork.CurrentRoom.PlayerCount);
+		}
+
+
+
+
+플레이어가 들어올떄 콜백
+public override void OnPlayerEnteredRoom( Player other  )
+
+
+
+
+플레이어가 나갈떄 콜백
+	public override void OnPlayerLeftRoom( Player other  )
+
+
+지역 플레이어가 방을 나갔을 때 호출됩니다.
