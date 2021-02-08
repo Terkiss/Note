@@ -1,25 +1,11 @@
 # 커맨드 패턴
 
 
-# Command
-실행될 기능에 대한 인터페이스
-실행될 기능을 execute 메서드로 선언함
-# ConcreteCommand
-실제로 실행되는 기능을 구현
-즉, Command라는 인터페이스를 구현함
-# Invoker
-기능의 실행을 요청하는 호출자 클래스
-# Actor
-ConcreteCommand에서 execute 메서드를 구현할 때 필요한 클래스
-즉, ConcreteCommand의 기능을 실행하기 위해 사용하는 수신자 클래스
 
 
-
-예시]
 
 Invoker 
      BehaviourCommand의 execute를 요청하는 호출자 클래스 
-
 
 Command
     실행될 기능을 execute 메서드로 선언
@@ -29,7 +15,11 @@ BehaviourCommand
     command 인터페이스를 구현,
     실제로 실행을 하는 기능을 구현함
 
+Actor
+    BehaviourCommand클래스에서 execute 메서드를 구현 할떄 필요한 클래스
+    BehaviourCommand의 기능을 수행하기 위해 사용자는 수신자 클래스
 
+예시]
 
 input -> x버튼
 input -> b버튼
@@ -41,3 +31,13 @@ input -> a버튼
 기존의 버튼 의 기능을  뺴돌려서
 
 Actor안에 메소드로 구현
+
+BehaviourCommand는 인터페이스를 구현하고
+인터페이스가 요구하는 execute 메서드를 구현하기 위해 뺴돌린 actor의 개별 메서드를
+사용해서 execute 메서드를 구현
+
+Command 
+    명령을 한번 감싸기 위한 추상 인터페이스
+
+
+</br><img src ="https://github.com/Terkiss/Note/blob/master/image/85.PNG?raw=true" width = "720" height = "480"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
