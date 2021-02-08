@@ -40,4 +40,4 @@ Command
     명령을 한번 감싸기 위한 추상 인터페이스
 
 
-</br><img src ="https://github.com/Terkiss/Note/blob/master/image/85.PNG?raw=true" width = "720" height = "480"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
+</br><img src ="https://github.com/Terkiss/Note/blob/master/image/85.PNG?raw=true" width = "480" height = "180"> <br>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </img>
