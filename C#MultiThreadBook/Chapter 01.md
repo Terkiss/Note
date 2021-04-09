@@ -114,13 +114,203 @@
         }
     }
 
-
+    스레드가 연산을 완료 할떄까지 메인스레드가 대기 합니다.
+    
 
 ## 스레드 중단
+    - 이버ㅏㄴ 예제 에서 다른 스레드 시랳ㅇ을 중단하는 방법을 알아보자
+
+
+    - 예제 구현 
+
+    using System;
+    using System.Threading;
+-
+    namespace Chapter1.Recipe5
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Starting program...");
+                // 스레드 생성 
+                Thread t = new Thread(PrintNumbersWithStatus);
+                Thread t2 = new Thread(DoNothing);
+
+                Console.WriteLine(t.ThreadState.ToString());
+
+                t2.Start();
+                t.Start();
+
+                for (int i = 1; i < 30; i++)
+                {
+                    Console.WriteLine("0"+t.ThreadState.ToString());
+                }
+                Thread.Sleep(TimeSpan.FromSeconds(6));
+
+                t.Abort(); // 중단 
+
+                Console.WriteLine("A thread has been aborted");
+                Console.WriteLine(t.ThreadState.ToString());
+                Console.WriteLine(t2.ThreadState.ToString());
+            }
+
+            static void DoNothing()
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+            }
+
+            static void PrintNumbersWithStatus()
+            {
+                Console.WriteLine("Starting...");
+                Console.WriteLine(Thread.CurrentThread.ThreadState.ToString());
+                for (int i = 1; i < 10; i++)
+                {
+                    Thread.Sleep(TimeSpan.FromSeconds(2));
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }
+
 
 ## 스레드 상태 조사
+- 이버ㅏㄴ 예제 에서 다른 스레드 상태를 조사 하는 방법을 알아보자
+
+
+    - 예제 구현 
+
+    using System;
+    using System.Threading;
+
+    namespace Chapter1.Recipe5
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Starting program...");
+                // 스레드 생성 
+                Thread t = new Thread(PrintNumbersWithStatus);
+                Thread t2 = new Thread(DoNothing);
+
+                Console.WriteLine(t.ThreadState.ToString());
+
+                t2.Start();
+                t.Start();
+
+                for (int i = 1; i < 30; i++)
+                {
+                    Console.WriteLine("0"+t.ThreadState.ToString());
+                }
+                Thread.Sleep(TimeSpan.FromSeconds(6));
+
+                t.Abort(); // 중단 
+
+                Console.WriteLine("A thread has been aborted");
+                Console.WriteLine(t.ThreadState.ToString());
+                Console.WriteLine(t2.ThreadState.ToString());
+            }
+
+            static void DoNothing()
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+            }
+
+            static void PrintNumbersWithStatus()
+            {
+                Console.WriteLine("Starting...");
+                Console.WriteLine(Thread.CurrentThread.ThreadState.ToString());
+                for (int i = 1; i < 10; i++)
+                {
+                    Thread.Sleep(TimeSpan.FromSeconds(2));
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }
 
 ## 스레드 우선순위
+
+스레드 우선순위 예제
+
+
+using System;
+using System.Diagnostics;
+using System.Threading;
+
+namespace Chapter1.Recipe6
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			// 현재 스레드 우선 순위는 노멀 
+			Console.WriteLine("Current thread priority: {0}", Thread.CurrentThread.Priority);
+			Console.WriteLine("Running on all cores available");
+
+			RunThreads();
+
+
+			// 2초간 정지 
+			Thread.Sleep(TimeSpan.FromSeconds(2));
+
+			Console.WriteLine("Running on a single core");
+
+			// 해당 프로세스에서 점율을 고정함 
+			Process.GetCurrentProcess().ProcessorAffinity = new IntPtr(1);
+			
+			RunThreads();
+
+		}
+
+		static void RunThreads()
+		{
+			var sample = new ThreadSample();
+
+			var threadOne = new Thread(sample.CountNumbers);
+			threadOne.Name = "ThreadOne";
+			var threadTwo = new Thread(sample.CountNumbers);
+			threadTwo.Name = "ThreadTwo";
+
+			threadOne.Priority = ThreadPriority.Highest;
+			threadTwo.Priority = ThreadPriority.Lowest;
+			threadOne.Start();
+			threadTwo.Start();
+
+			Thread.Sleep(TimeSpan.FromSeconds(2));
+			sample.Stop();
+		}
+
+		class ThreadSample
+		{
+			private bool _isStopped = false;
+
+			public void Stop()
+			{
+				Console.Write("종료 됨 ::: \n");
+				_isStopped = true;
+			}
+
+			public void CountNumbers()
+			{
+				long counter = 0;
+
+				while (!_isStopped)
+				{
+					counter++;
+				}
+
+				Console.WriteLine("{0} with {1,11} priority " +
+							"has a count = {2,13}", Thread.CurrentThread.Name,
+							Thread.CurrentThread.Priority,
+							counter.ToString("N0"));
+			}
+		}
+	}
+}
+
+
 
 ## 포그라운드 스레드와 백그라운드 스레드
 
