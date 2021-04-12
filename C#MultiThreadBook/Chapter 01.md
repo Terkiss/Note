@@ -314,10 +314,196 @@ namespace Chapter1.Recipe6
 
 ## 포그라운드 스레드와 백그라운드 스레드
 
+
+using System;
+using System.Threading;
+
+
+
+
+
+/// <summary>
+/// 포그라운드 스레드와 백그라운드 스레드 예제
+/// 포그라운드 스레드와 백그라운드 스레드의 개념을 소개 하고 프로구램 의 동작에 영향을 끼치는 옵션을 설정 하는 방법을 알아보자 
+/// </summary>
+namespace Chapter1.Recipe7
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			var sampleForeground = new ThreadSample(10);  // 포그라운드 에서 돌아가는 스레드 
+			var sampleBackground = new ThreadSample(20); // 백그라운드에서 돌아가는 스레드
+
+			var threadOne = new Thread(sampleForeground.CountNumbers);  // 스레드 1 생성
+			threadOne.Name = "ForegroundThread";  // 스레드 이름 지정
+			var threadTwo = new Thread(sampleBackground.CountNumbers);  // 스레드 2 생성 
+			threadTwo.Name = "BackgroundThread";
+			threadTwo.IsBackground = true;  // 백그라운드 스레드를 지정 
+
+			threadOne.Start(); // 시작
+			threadTwo.Start();
+
+			/*
+			 *
+			 *예상 되는 실행 메인 스레드의 스레드가 종료 하고 메인스레드가 종료 되 어도 백그라운드 스레드는 게속 실행이 될것이다.
+			 *
+			 *실제 실행 결과는 포 그라운드 스레드의 실행은 메인스레드가 기달려주지만
+			 *백그아운드 스레드의 경우 메인 스레드가 기다려 주지 않고 
+			 * 프로그램을 종료 한다.
+			 */
+		}
+
+		class ThreadSample
+		{
+			private readonly int _iterations;
+
+			public ThreadSample(int iterations)
+			{
+				_iterations = iterations;  // 스레드 샘플 클래스의 반복자를 생성자 에서 지정 
+			}
+			public void CountNumbers()
+			{
+				for (int i = 0; i < _iterations; i++)  // 반복자 만큼 포를 돌면서 0.5 초간 대기하며 쓰래드 이름과 현재  i값을 출력 
+				{
+					Thread.Sleep(TimeSpan.FromSeconds(0.5));  // 0.5초간 진행을 멈춤
+					Console.WriteLine("{0} prints {1}", Thread.CurrentThread.Name, i);
+				}
+			}
+		}
+	}
+}
+
+
+
 ## 스레드에 파라밍터 전달
+
+
+
+using System;
+using System.Threading;
+
+
+
+// 스레드에 파라미터 전달 예제
+/// <summary>
+/// 필요한 데이터를 다른 스레드에서 실행하는 코드를 제공하는 방법에 대해 알아 보자 
+/// 또한 이작업을 함에 있ㅇ서 일반 적인 실수도 알아 보자 
+/// 
+/// </summary>
+namespace Chapter1.Recipe8
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+
+			var sample = new ThreadSample(10);  // 반복자와 스레드 샘플 클래스를 생성  
+
+			var threadOne = new Thread(sample.CountNumbers);  // 스레드 와 스레드 이름 지정
+			threadOne.Name = "ThreadOne";
+			threadOne.Start(); // 실행 
+			threadOne.Join(); // 기다림 
+
+			Console.WriteLine("--------------------------");
+
+			var threadTwo = new Thread(Count); // ? COUNT 메서드 실행
+			threadTwo.Name = "ThreadTwo"; 
+			threadTwo.Start(8); // 파라메터 전달 
+			threadTwo.Join(); // 기다림
+
+			Console.WriteLine("--------------------------");
+
+			var threadThree = new Thread(() => CountNumbers(12));  // 스테틱 메서드 COUNTNUMBER 실행
+			threadThree.Name = "ThreadThree"; // 지정
+			threadThree.Start(); // 시;작 
+			threadThree.Join(); // 기다림 
+			Console.WriteLine("--------------------------");
+
+			int i = 10;
+			var threadFour = new Thread(() => CountNumbers(i)); // 스텍틱 메서드 PRINTNUM 실행
+
+			threadFour.Name = "ThreadFour";
+			threadFour.Start();
+			i = 20;
+			var threadFive = new Thread(() => CountNumbers(i));
+
+
+			threadFive.Name = "ThreadFive";
+
+			threadFive.Start();
+
+			Console.WriteLine("--------------------------");
+			/*
+			 * 예상 실행 결과 
+			 * 스레드 1번이 10번의 행동을 함 
+			 * 
+			 * 스레드 2번이 스테틱 메서드 카운트의 인자를 받아서 카운트 넘버를 호출함  이후 인자 만큼 루프를 돔
+			 * 
+			 * 스레드 3번이 12개의 인자를 받아서 스테틱을 함 시작함 
+			 * 
+			 * 4번  출력함 
+			 * 
+			 * 실제 출력 
+			 * 스레드 1번은 매개 변수를 간접적인 방법으로 세팅 
+			 * 스레드 2는 Start 메서드에 인자로 설정 이떄 인자는 한개로 제한
+			 * 
+			 * 스레드 3은 람다 표현식으로 인자를 설정 
+			 * 
+			 * 스레드 4,5는  람다 표현식의 특징, 같은 변수를 가리키면 다름
+			 * 
+			 * 
+			 */
+
+		}
+
+		static void Count(object iterations)
+		{
+			CountNumbers((int)iterations);
+		}
+
+		static void CountNumbers(int iterations)
+		{
+			for (int i = 1; i <= iterations; i++)
+			{
+				Thread.Sleep(TimeSpan.FromSeconds(0.5));
+				Console.WriteLine("{0} prints {1}", Thread.CurrentThread.Name, i);
+			}
+		}
+
+		static void PrintNumber(int number)
+		{
+			Console.WriteLine(number);
+		}
+
+		class ThreadSample
+		{
+			private readonly int _iterations;
+
+			public ThreadSample(int iterations)
+			{
+				_iterations = iterations;
+			}
+			public void CountNumbers()
+			{
+				for (int i = 1; i <= _iterations; i++)
+				{
+					Thread.Sleep(TimeSpan.FromSeconds(0.5));
+					Console.WriteLine("{0} prints {1}", Thread.CurrentThread.Name, i);
+				}
+			}
+		}
+	}
+
+	
+}
+
+
+
+
 
 ## C# 의 lock 키워드로 잠그기
 
 ## moniter 생성자로 잠그기
 
-## 예외 처리
+## 예외 처리    
