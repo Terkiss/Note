@@ -504,6 +504,199 @@ namespace Chapter1.Recipe8
 
 ## C# 의 lock 키워드로 잠그기
 
+using System;
+using System.Threading;
+
+// c#  스레드 에서 한 스레드가 어떤 ;자원을사용할떄 다른 스드가 ㅏ동시에 사용하지 않을음ㅇ/ㅇ/
+// 보장화는 방법에대해 알아 보자
+// 이러한 내용을 통해  그것이 필요한 이유를 이해하고 스레드 안정성 개념에 대한 모든 것을 살펴 볼수 있다.  
+
+/// <summary>
+/// 이번 에제도 역시 비주얼 스튜디오 만 필요하다.
+/// </summary>
+namespace Chapter1.Recipe9
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			// 잘못된 카운터
+			Console.WriteLine("Incorrect counter");
+
+			var c = new Counter();
+
+
+			// 스레드에 카운터를 할당 
+			var t1 = new Thread(() => TestCounter(c));  // 스레드에 하나의 카운터 주소를 할당 했음 공유 될거 같다 
+			var t2 = new Thread(() => TestCounter(c));
+			var t3 = new Thread(() => TestCounter(c));
+			t1.Start(); // 실행  
+			t2.Start();
+			t3.Start();
+			t1.Join(); // 대기
+			t2.Join();
+			t3.Join();
+
+			Console.WriteLine("Total count: {0}",c.Count); 
+			Console.WriteLine("--------------------------");
+
+			Console.WriteLine("Correct counter");
+
+			var c1 = new CounterWithLock();
+
+			t1 = new Thread(() => TestCounter(c1));
+			t2 = new Thread(() => TestCounter(c1));
+			t3 = new Thread(() => TestCounter(c1));
+			t1.Start();
+			t2.Start();
+			t3.Start();
+			t1.Join();
+			t2.Join();
+			t3.Join();
+			Console.WriteLine("Total count: {0}", c1.Count);
+
+
+			// 실행 예측
+			/*
+			 * 잘못된 카운터  방식에서는 값이 공유가 되므로 스레드 마다 다 다를것 이다.\
+			 * 반면 제대로 된 방법에서는 0 이 출력 될것이다.
+			 * 
+			 * 실제 실행
+			 * 예상한대로 동작 했으나 설명이 부족했다.
+			 * 잘못된 계수기 방식에서는 하나의 값을 1,2,3 번 스레드가 동시 접근하므로 어떤 값이 나올지는 예측이 불가능하다.
+			 * 반면에 제대로된 계수기는 증감 메서드를 한번 호출시마다 실행 하고 그것을 lock 키워드로 객체를 잠궈 버리므로 0이란 값의 출력을 보장 할 수 있다.
+			 * 
+			 */
+		} 
+
+		static void TestCounter(CounterBase c)
+		{
+			for (int i = 0; i < 100000; i++)
+			{
+				c.Increment();
+				c.Decrement();
+			}
+		}
+
+
+		// 카운터 클래스 
+		class Counter : CounterBase
+		{
+			public int Count { get; private set; }
+
+			public override void Increment()
+			{
+				Count++;
+			}
+
+			public override void Decrement()
+			{
+				Count--;
+			}
+		}
+
+		class CounterWithLock : CounterBase
+		{
+			private readonly object _syncRoot = new Object();
+
+			public int Count { get; private set; }
+
+			public override void Increment()
+			{
+				lock (_syncRoot)  // 오브젝트 잠구기 동시에 하나만 이용가능 
+				{
+					Count++;
+				}
+			}
+
+			public override void Decrement()
+			{
+				lock (_syncRoot) // 동시 하나만 이용가능 
+				{
+					Count--;
+				}
+			}
+		}
+
+		abstract class CounterBase
+		{
+			public abstract void Increment();
+
+			public abstract void Decrement();
+		}
+	}
+}
+
+
 ## moniter 생성자로 잠그기
+
+using System;
+using System.Threading;
+
+/// <summary>
+/// 스레드의 교착상태 오류 예제
+/// lock 키워드의 적절한사용으로 교착상태를 얻을수 있다.
+/// 
+/// </summary>
+namespace Chapter1.Recipe10
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			object lock1 = new object();
+			object lock2 = new object();
+
+			// 스레드 생성 과 시작 동시 진행 멈출수 없음 기타 조작 불능 
+			new Thread(() => LockTooMuch(lock1, lock2)).Start(); // lock1 잠구고 lock 취득 대기
+
+			lock (lock2)  // lock2 잠구고
+			{
+				Thread.Sleep(1000);
+				Console.WriteLine("Monitor.TryEnter allows not to get stuck, returning false after a specified timeout is elapsed");
+				if (Monitor.TryEnter(lock1, TimeSpan.FromSeconds(5))) //lock1 취득 대기, 5초동안 취득이 안되면 time out 실행 
+				{
+					Console.WriteLine("Acquired a protected resource succesfully");
+					
+				}
+				else
+				{
+					Console.WriteLine("Timeout acquiring a resource!");
+				}
+			}
+
+			new Thread(() => LockTooMuch(lock1, lock2)).Start();
+
+			Console.WriteLine("----------------------------------");
+			lock (lock2)
+			{
+				Console.WriteLine("This will be a deadlock!");
+				lock (lock2) // 자기가 점유 하고 있으면 실행 가능 아마도 이 클래스가 종료 하기 전까지 실행 할거 같다 .
+				{
+                    Console.WriteLine("호에에");
+
+				}
+				Thread.Sleep(1000);
+				lock (lock1)
+				{
+					Console.WriteLine("Acquired a protected resource succesfully");
+				}
+			}
+			
+		}
+
+		static void LockTooMuch(object lock1, object lock2)
+		{
+			lock (lock1)
+			{
+				Thread.Sleep(1000);
+				lock (lock2);
+			}
+		}
+	}
+}
+
+
+
 
 ## 예외 처리    
