@@ -700,3 +700,59 @@ namespace Chapter1.Recipe10
 
 
 ## 예외 처리    
+
+using System;
+using System.Threading;
+
+
+/// <summary>
+/// 
+/// 이번 예제는 다른 스레드에서 예외 처리를 적절하게 수행하는 방법을 알아보자
+/// 스레드 내부에 TRY / CATCH  구문을 항상 넣어 두는것이 중요 한데 스레드 코드 외부에서 예외를 잡는 것은 불가능 하기 떄문이다.
+/// 
+/// </summary>
+namespace Chapter1.Recipe11
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			var t = new Thread(FaultyThread); // 스레 드 생성 
+			t.Start(); // 시작 
+			t.Join(); // 대기
+
+			try
+			{
+				t = new Thread(BadFaultyThread);  // 예외르 못잡음 
+				t.Start();
+			}
+			catch (Exception ex)
+			{
+				// 예외 처리 
+				Console.WriteLine("We won't get here!");
+			}
+		}
+
+		static void BadFaultyThread() 
+		{
+			Console.WriteLine("Starting a faulty thread...");
+			Thread.Sleep(TimeSpan.FromSeconds(2));
+            throw new Exception("Boom!");
+		}
+
+		static void FaultyThread()
+		{
+			try
+			{
+				Console.WriteLine("Starting a faulty thread...");
+				Thread.Sleep(TimeSpan.FromSeconds(1));
+				throw new Exception("Boom!"); // 예외 생성 해서 던지기 
+			}
+			catch (Exception ex)
+			{ 
+				// 생성된 예외를 받기
+				Console.WriteLine("Exception handled: {0}", ex.Message);  // 예외 메시지 출력
+			}
+		}
+	}
+}
