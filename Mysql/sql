@@ -1,0 +1,15 @@
+
+SELECT  COLUMN_NAME ,  -- 중복되는 데이터
+         COUNT(COLUMN_NAME) -- 중복 갯수
+FROM TABLE_NAME              -- 중복조사를 할 테이블 이름
+GROUP BY COLUMN_NAME      -- 중복되는 항목 조사를 할 컬럼
+HAVING COUNT(COLUMN_NAME) > 1 ;  -- 1개 이상 (갯수)
+
+
+
+SELECT  sessionKey ,  -- 중복되는 데이터
+         COUNT(sessionKey) -- 중복 갯수
+FROM `session`            -- 중복조사를 할 테이블 이름
+GROUP BY sessionKey      -- 중복되는 항목 조사를 할 컬럼
+HAVING COUNT(sessionKey) > 1 ;  -- 1개 이상 (갯수)
+

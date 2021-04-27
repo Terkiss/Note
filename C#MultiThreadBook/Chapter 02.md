@@ -347,6 +347,40 @@ namespace Chapter2.Recipe5
 
 
 ## CountdownEvent 생성자 사용
+
+using System;
+using System.Threading;
+
+namespace Chapter2.Recipe6
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Starting two operations");
+			var t1 = new Thread(() => PerformOperation("Operation 1 is completed", 4));
+			var t2 = new Thread(() => PerformOperation("Operation 2 is completed", 8));
+			t1.Start();
+			t2.Start();
+			_countdown.Wait();
+			Console.WriteLine("Both operations have been completed.");
+			_countdown.Dispose();
+		}
+
+
+		// 연산의 갯수 지정 해당 연산이 시그날이 실행될떄까지 영구 대기
+		static CountdownEvent _countdown = new CountdownEvent(10);
+
+		static void PerformOperation(string message, int seconds)
+		{
+			Thread.Sleep(TimeSpan.FromSeconds(seconds));
+			Console.WriteLine(message);
+			_countdown.Signal();
+		}
+	}
+}
+
+
 ## Barrier 생성자 사용
 ## ReaderWriterLockSlim 생성자 사용
 ## SpinWait 생성자 사용
