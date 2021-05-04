@@ -123,3 +123,77 @@
 
 // PRO GUARD 설정이 있음
 그것은 예제 프로젝트 설정을 보고 해야함 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Firebase Analytics, AdMob, Dynamic Links, Remote Config, Messaging
+# eg. https://github.com/firebase/quickstart-android/blob/master/analytics/app/proguard-rules.pro
+-keepattributes EnclosingMethod
+-keepattributes InnerClasses
+# Firebase Auth (https://github.com/firebase/quickstart-android/blob/master/auth/app/proguard-rules.pro)
+-keepattributes Signature
+-keepattributes *Annotation*
+-keepattributes EnclosingMethod
+-keepattributes InnerClasses
+# Firebase Crashlytics (https://github.com/firebase/quickstart-android/blob/master/crash/app/proguard-rules.pro)
+-dontwarn org.xmlpull.v1.**
+-dontnote org.xmlpull.v1.**
+-keep class org.xmlpull.** { *; }
+-keepclassmembers class org.xmlpull.** { *; }
+# Firebase Functions (https://github.com/firebase/quickstart-android/blob/master/functions/app/proguard-rules.pro)
+# https://github.com/firebase/FirebaseUI-Android/issues/1227
+-dontwarn com.firebase.ui.auth.data.remote.**
+# Random attempts to get this working!
+-keep public class com.google.firebase.** {
+   public *;
+}
+-keep class com.firebase.** { *; }
+-keep class com.google.firebase.** { *; }
+-keepnames class com.google.firebase.** { *; }
+-keep class com.firebase.** { *; }
+-keep class org.apache.** { *; }
+-keepnames class com.shaded.fasterxml.** { *; }
+-keepnames class com.fasterxml.jackson.** { *; }
+-keepnames class javax.servlet.** { *; }
+-keepnames class org.ietf.jgss.** { *; }
+-dontwarn org.apache.**
+-dontwarn org.w3c.dom.**
+-keep class java.lang.Object { *; }
+-keepnames class java.lang.Object { *; }
+ 
+
+ -keep class com.google.android.gms.games.leaderboard.** { *; }
+-keep class com.google.android.gms.games.snapshot.** { *; }
+-keep class com.google.android.gms.games.achievement.** { *; }
+-keep class com.google.android.gms.games.event.** { *; }
+-keep class com.google.android.gms.games.stats.** { *; }
+-keep class com.google.android.gms.games.video.** { *; }
+-keep class com.google.android.gms.games.* { *; }
+-keep class com.google.android.gms.common.api.ResultCallback { *; }
+-keep class com.google.android.gms.signin.** { *; }
+-keep class com.google.android.gms.dynamic.** { *; }
+-keep class com.google.android.gms.dynamite.** { *; }
+-keep class com.google.android.gms.tasks.** { *; }
+-keep class com.google.android.gms.security.** { *; }
+-keep class com.google.android.gms.base.** { *; }
+-keep class com.google.android.gms.actions.** { *; }
+-keep class com.google.games.bridge.** { *; }
+-keep class com.google.android.gms.common.ConnectionResult { *; }
+-keep class com.google.android.gms.common.GooglePlayServicesUtil { *; }
+-keep class com.google.android.gms.common.api.** { *; }
+-keep class com.google.android.gms.common.data.DataBufferUtils { *; }
+-keep class com.google.android.gms.games.quest.** { *; }
+-keep class com.google.android.gms.nearby.** { *; }
