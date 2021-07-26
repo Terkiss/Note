@@ -1,0 +1,11 @@
+100 -> success code
+
+101 -> error code 
+
+102 -> clientErr code
+
+103 -> serverErr code
+
+104 -> sessionkey error
+
+105 -> target Null exception
