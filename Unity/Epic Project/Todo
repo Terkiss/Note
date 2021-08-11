@@ -1,4 +1,45 @@
+top priority todo
 
+다이스 맵 생성시 기존의 정적 링크 대신 동적으로 링크
+링크의 순서
+
+1. wheel 을 씬에서 찾아서 세팅
+2. boss logo 를 씬에서 찾아서 세팅
+3. root map object 를 세팅
+4. boss enemy 세팅
+5. 에네미 참조  < json 이나, 텍스트, sqllite 등을 사용 해 저장된  에네미를 사용
+6. 유료 상자 참조
+7. 무료 상자 참조
+8. 버프 상자 참조
+9. 디버프 상자 참조 
+10. 에네미 카운트 세팅
+11. 유료 상자 카운트 세팅]
+12. 무료 상자 카운트 세팅
+13. 버프 상자 카운트 세팅
+14. 디버프 상자 카운트 세팅
+
+
+15. player move controll 동적 부착
+16. mov ability  세팅
+17. map construct 세팅
+18. current position 초기화
+19. player offset position 세팅
+20. player speed 세팅
+
+21. Dices 오브젝트에 dice launch 클래스 동적 부착 
+22. dice selector -> three value dice 설정
+23. player mov ability 클래스 연결
+24. dice speed 세팅
+25.  tag 세팅
+26. diceNumEval Point 세팅 
+
+27. complete 시 생성 실행 (ex. mapcontsruct.loadmap())
+
+
+
+
+
+When you have time
 
 1. 계정 마지막 접속 날짜 갱신
 
@@ -12,6 +53,7 @@
 
 6. 로비 에서 이름 수정 버튼이 대표 캐릭터로 선택 되어 졌을떄만 가능하게 수정
 
+<<<<<<< HEAD
 
 
 
@@ -40,3 +82,32 @@ slungle
 7 탑 승 인원 / 총 인원수 * 100 ->  1 프로그래스
 
 8 버스 전화 
+=======
+7. 재접속 했을떄 대표캐릭터 지정 -> sqlite 를 읽어서 확인후 
+
+8. 싱글 플레이 다이스 맵에서 주사위 가 동작 중일떄 주사위 런치 버튼의 비활성 작업 
+
+9. Single dice map 로직 변경 필요
+    현 시점에서는 로딩중에 초기화 를 하고 있음
+    기기 속도가 빠른 유저 일경우는 상관 없지만
+    만약 느린 속도의 유저가 플레이시 초기화 가 어 긋 날 가능성이 존재함
+    따라서 Sceneload manager 에게 좀더 역활을 가중 시킬 필요가 있음 
+
+10. myownchracter 테이블에서 현재 속한 파티를 나타내는 컬럼 추가 후 로직 수정 
+
+11. myOwnCharacter 테이블에 파티원 넘버 컬럼 추가 
+
+12. skill info 관련 클래스 수정 및 전송 신부 json 말고 일일히 호출 형신으로 교환. json 방식더거ㅣㄴ증
+// 동적 버튼 로딩 
+
+                button.onClick = new Button.ButtonClickedEvent();
+                button.onClick.AddListener(() => {
+
+                    var proxy = (PolyClient2Server.Proxy)ChrClient.instance.getServerProxy();
+
+
+                    proxy.RequestMailReceiveCommit(Nettention.Proud.HostID.HostID_Server, Nettention.Proud.RmiContext.ReliableSend, sessionKey, JsonUtility.ToJson(item));
+
+                    Destroy(obj);
+                });
+>>>>>>> 6556eaf52d5f795e6686691cba24d7a930a0bb65
