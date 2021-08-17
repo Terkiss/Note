@@ -3,38 +3,58 @@ top priority todo
 다이스 맵 생성시 기존의 정적 링크 대신 동적으로 링크
 링크의 순서
 
-1. wheel 을 씬에서 찾아서 세팅
-2. boss logo 를 씬에서 찾아서 세팅
-3. root map object 를 세팅
-4. boss enemy 세팅
-5. 에네미 참조  < json 이나, 텍스트, sqllite 등을 사용 해 저장된  에네미를 사용
-6. 유료 상자 참조
-7. 무료 상자 참조
-8. 버프 상자 참조
-9. 디버프 상자 참조 
-10. 에네미 카운트 세팅
-11. 유료 상자 카운트 세팅]
-12. 무료 상자 카운트 세팅
-13. 버프 상자 카운트 세팅
-14. 디버프 상자 카운트 세팅
+1. wheel 을 씬에서 찾아서 세팅 -> ok 
+2. boss logo 를 씬에서 찾아서 세팅 -> ok
+3. root map object 를 세팅 -> ok
+4. boss enemy 세팅 -> ok
+5. 에네미 참조  < json 이나, 텍스트, sqllite 등을 사용 해 저장된  에네미를 사용 -> ok
+6. 유료 상자 참조 -> ok
+7. 무료 상자 참조 -> ok
+8. 버프 상자 참조 -> ok
+9. 디버프 상자 참조  -> ok
+10. 에네미 카운트 세팅 -> ok
+11. 유료 상자 카운트 세팅] -> ok
+12. 무료 상자 카운트 세팅 -> ok
+13. 버프 상자 카운트 세팅 -> ok
+14. 디버프 상자 카운트 세팅 -> ok
 
 
-15. player move controll 동적 부착
-16. mov ability  세팅
-17. map construct 세팅
-18. current position 초기화
-19. player offset position 세팅
-20. player speed 세팅
+15. player move controll 동적 부착 -> ok
+16. mov ability  세팅 -> ok
+17. map construct 세팅 -> ok
+18. current position 초기화 -> ok
+19. player offset position 세팅 -> ok
+20. player speed 세팅 -> ok
 
-21. Dices 오브젝트에 dice launch 클래스 동적 부착 
-22. dice selector -> three value dice 설정
-23. player mov ability 클래스 연결
-24. dice speed 세팅
-25.  tag 세팅
-26. diceNumEval Point 세팅 
+21. Dices 오브젝트에 dice launch 클래스 동적 부착  -> ok
+22. dice selector -> three value dice 설정 -> ok
+23. player mov ability 클래스 연결 -> ok
+24. dice speed 세팅 -> ok
+25.  tag 세팅 -> ok
+26. diceNumEval Point 세팅  -> ok
 
-27. complete 시 생성 실행 (ex. mapcontsruct.loadmap())
+27. complete 시 생성 실행 (ex. mapcontsruct.loadmap()) -> ok
+28. 맵 로더 및 옵저버 로더 리펙토링 1차 -> ok
 
+
+
+전투 의 순서
+1. 전투 관련 클래스 리뷰
+2. 전투 관련 클래스 리펙토링
+
+3. 전투 계측 알고리즘
+3-1. 시간을 기준으로 점수 계산
+3-2. 유닛의 생존도를 기준으로 점수 계산
+3-3. 얻어진 점수를 토대로 랭크 도입
+    f -> d-> c-> b -> a -> s -> ss
+
+4. 실제 전투 실행
+    GameManager -> 전투의 페이스 메이킹 
+    GameManager는 모든 공격을 명령이란 하나의 상위 객체로 관리. 한순간에 하나의 공격 명령 처리
+
+    GameManager -> Command.Excute() -> 각각의 공격 명령이 실행되는 순간에 자신의 공격을 특정 시킴
+    ex) -> 
+    Command[] com = {command("물리"),command("마법"),command("전체"),command("전체"),command("마법"),command("물리"),command("마법")}
 
 
 
@@ -53,38 +73,6 @@ When you have time
 
 6. 로비 에서 이름 수정 버튼이 대표 캐릭터로 선택 되어 졌을떄만 가능하게 수정
 
-<<<<<<< HEAD
-
-
-
-
-
-slungle
-버스 타실
-1. UI 배치
-
-2. 버스 번호 에 따른 저장 인원 을위한 내부 데이터 베이스 수정 필요
-
-3. 서버에서 현승객 수 가져오기;
-
-4. 예약 탑승자수 가져오기
-
-5. + 탑승 예약 루틴
-     -> 미리 등록 한 카드로 예약 서버에 반영 
-
-
-
-
-     
-6. - 탑승 취소 루틴
-
-
-7 탑 승 인원 / 총 인원수 * 100 ->  1 프로그래스
-
-8 버스 전화 
-
-
-
 
 7. 재접속 했을떄 대표캐릭터 지정 -> sqlite 를 읽어서 확인후 
 
@@ -100,7 +88,13 @@ slungle
 
 11. myOwnCharacter 테이블에 파티원 넘버 컬럼 추가 
 
-12. skill info 관련 클래스 수정 및 전송 신부 json 말고 일일히 호출 형신으로 교환. json 방식더거ㅣㄴ증
+12. skill info 관련 클래스 수정 및 전송 신부 json 말고 일일히 호출 형신으로 교환. json 방식더증
+
+13. 서버 프로그램을 몇개의 프로그램을 나눌 필요가 있음
+
+14. 서버 프로그램 리펙토링 1차
+
+15. 칼러 피카 찿기
 // 동적 버튼 로딩 
 
                 button.onClick = new Button.ButtonClickedEvent();
@@ -113,4 +107,27 @@ slungle
 
                     Destroy(obj);
                 });
->>>>>>> 6556eaf52d5f795e6686691cba24d7a930a0bb65
+
+
+
+Slungel`s Project TodoList
+
+버스 타실
+1. UI 배치
+
+2. 버스 번호 에 따른 저장 인원 을위한 내부 데이터 베이스 수정 필요
+
+3. 서버에서 현승객 수 가져오기;
+
+4. 예약 탑승자수 가져오기
+
+5. + 탑승 예약 루틴
+     -> 미리 등록 한 카드로 예약 서버에 반영 
+
+     
+6. - 탑승 취소 루틴
+
+
+7 탑 승 인원 / 총 인원수 * 100 ->  1 프로그래스
+
+8 버스 전화 
