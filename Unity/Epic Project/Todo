@@ -1,52 +1,52 @@
 top priority todo
 
 다이스 맵 생성시 기존의 정적 링크 대신 동적으로 링크
-링크의 순서
+    링크의 순서
 
-1. wheel 을 씬에서 찾아서 세팅 -> ok 
-2. boss logo 를 씬에서 찾아서 세팅 -> ok
-3. root map object 를 세팅 -> ok
-4. boss enemy 세팅 -> ok
-5. 에네미 참조  < json 이나, 텍스트, sqllite 등을 사용 해 저장된  에네미를 사용 -> ok
-6. 유료 상자 참조 -> ok
-7. 무료 상자 참조 -> ok
-8. 버프 상자 참조 -> ok
-9. 디버프 상자 참조  -> ok
-10. 에네미 카운트 세팅 -> ok
-11. 유료 상자 카운트 세팅] -> ok
-12. 무료 상자 카운트 세팅 -> ok
-13. 버프 상자 카운트 세팅 -> ok
-14. 디버프 상자 카운트 세팅 -> ok
+    1. wheel 을 씬에서 찾아서 세팅 -> ok 
+    2. boss logo 를 씬에서 찾아서 세팅 -> ok
+    3. root map object 를 세팅 -> ok
+    4. boss enemy 세팅 -> ok
+    5. 에네미 참조  < json 이나, 텍스트, sqllite 등을 사용 해 저장된  에네미를 사용 -> ok
+    6. 유료 상자 참조 -> ok
+    7. 무료 상자 참조 -> ok
+    8. 버프 상자 참조 -> ok
+    9. 디버프 상자 참조  -> ok
+    10. 에네미 카운트 세팅 -> ok
+    11. 유료 상자 카운트 세팅] -> ok
+    12. 무료 상자 카운트 세팅 -> ok
+    13. 버프 상자 카운트 세팅 -> ok
+    14. 디버프 상자 카운트 세팅 -> ok
 
 
-15. player move controll 동적 부착 -> ok
-16. mov ability  세팅 -> ok
-17. map construct 세팅 -> ok
-18. current position 초기화 -> ok
-19. player offset position 세팅 -> ok
-20. player speed 세팅 -> ok
+    15. player move controll 동적 부착 -> ok
+    16. mov ability  세팅 -> ok
+    17. map construct 세팅 -> ok
+    18. current position 초기화 -> ok
+    19. player offset position 세팅 -> ok
+    20. player speed 세팅 -> ok
 
-21. Dices 오브젝트에 dice launch 클래스 동적 부착  -> ok
-22. dice selector -> three value dice 설정 -> ok
-23. player mov ability 클래스 연결 -> ok
-24. dice speed 세팅 -> ok
-25.  tag 세팅 -> ok
-26. diceNumEval Point 세팅  -> ok
+    21. Dices 오브젝트에 dice launch 클래스 동적 부착  -> ok
+    22. dice selector -> three value dice 설정 -> ok
+    23. player mov ability 클래스 연결 -> ok
+    24. dice speed 세팅 -> ok
+    25.  tag 세팅 -> ok
+    26. diceNumEval Point 세팅  -> ok
 
-27. complete 시 생성 실행 (ex. mapcontsruct.loadmap()) -> ok
-28. 맵 로더 및 옵저버 로더 리펙토링 1차 -> ok
+    27. complete 시 생성 실행 (ex. mapcontsruct.loadmap()) -> ok
+    28. 맵 로더 및 옵저버 로더 리펙토링 1차 -> ok
 
 
 
 전투 의 순서
-1. 전투 관련 클래스 리뷰
-2. 전투 관련 클래스 리펙토링
+    1. 전투 관련 클래스 리뷰 
+    2. 전투 관련 클래스 리펙토링
 
-3. 전투 계측 알고리즘
-3-1. 시간을 기준으로 점수 계산
-3-2. 유닛의 생존도를 기준으로 점수 계산
-3-3. 얻어진 점수를 토대로 랭크 도입
-    f -> d-> c-> b -> a -> s -> ss
+    3. 전투 계측 알고리즘
+    3-1. 시간을 기준으로 점수 계산
+    3-2. 유닛의 생존도를 기준으로 점수 계산
+    3-3. 얻어진 점수를 토대로 랭크 도입
+        f -> d-> c-> b -> a -> s -> ss
 
 4. 실제 전투 실행
     GameManager -> 전투의 페이스 메이킹 
@@ -78,7 +78,7 @@ When you have time
 
 8. 싱글 플레이 다이스 맵에서 주사위 가 동작 중일떄 주사위 런치 버튼의 비활성 작업 
 
-9. Single dice map 로직 변경 필요
+9. Single dice map 로직 변경 필요   ---> 1차 ok 
     현 시점에서는 로딩중에 초기화 를 하고 있음
     기기 속도가 빠른 유저 일경우는 상관 없지만
     만약 느린 속도의 유저가 플레이시 초기화 가 어 긋 날 가능성이 존재함
@@ -95,6 +95,18 @@ When you have time
 14. 서버 프로그램 리펙토링 1차
 
 15. 칼러 피카 찿기
+
+16. SingleMapLoader 클래스 리펙토링
+
+17. battleinfomation 클래스 리펙토링
+
+18. accountinfoclass 리펙토링
+
+19. ChrClient 클래스 리펙토링 
+
+20. 캐릭터 스킬 스텟 정보 클래스 리펙토링  -> 배틀 정보 클래스도 순차적으로 리펙토링  
+
+
 // 동적 버튼 로딩 
 
                 button.onClick = new Button.ButtonClickedEvent();
