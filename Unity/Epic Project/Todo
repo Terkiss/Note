@@ -110,6 +110,15 @@ When you have time
 
 22. 전투에서의 데미지 판정 함수 리펙토링 
 
+23. 전투시 이펙트 fx 대한 오브젝트 풀 구성 필요 
+
+24. 전투 fx 파일의 폴더 구조 변경 resourse/battlefx/meelee...
+                                                 /rangel...
+                                                 /party ... 등등 공격 스킬 종류에 따라 나누기 
+
+25. 모든 자료들 폴더 구조 정리
+
+
 // 동적 버튼 로딩 
 
                 button.onClick = new Button.ButtonClickedEvent();
