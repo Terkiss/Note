@@ -39,8 +39,8 @@ top priority todo
 
 
 전투 의 순서
-    1. 전투 관련 클래스 리뷰 
-    2. 전투 관련 클래스 리펙토링
+    1. 전투 관련 클래스 리뷰   ---> ok
+    2. 전투 관련 클래스 리펙토링 ---> ok
 
     3. 전투 계측 알고리즘
     3-1. 시간을 기준으로 점수 계산
@@ -48,7 +48,7 @@ top priority todo
     3-3. 얻어진 점수를 토대로 랭크 도입
         f -> d-> c-> b -> a -> s -> ss
 
-4. 실제 전투 실행
+ 실제 전투 실행
     GameManager -> 전투의 페이스 메이킹 
     GameManager는 모든 공격을 명령이란 하나의 상위 객체로 관리. 한순간에 하나의 공격 명령 처리
 
@@ -56,6 +56,18 @@ top priority todo
     ex) -> 
     Command[] com = {command("물리"),command("마법"),command("전체"),command("전체"),command("마법"),command("물리"),command("마법")}
 
+
+
+
+레이드의 순서
+1. 멀티 플레이 를 누름 5인 레이드 선택
+2. 매치 메이킹 시작
+3. 5인의 방들중에 랜덤 입장
+4. 입장 한 방에서 포텐셜 avg 가 제일 높은 사람 찿기
+5. avg 가 제일 높은 사람을 리더로 설정
+6. 리더인 클라이언트에서 명령 생성 및 인출 작업 시작
+7. 서버는 열심히 동기화
+8. 최종 국면에서 보상은 서버에서 처리 
 
 
 
@@ -95,11 +107,11 @@ When you have time
 
 14. 서버 프로그램 리펙토링 1차
 
-15. 칼러 피카 찿기
+15. 칼러 피카 찿기 ---> ok  2021 08 23  
 
-16. SingleMapLoader 클래스 리펙토링
+16. SingleMapLoader 클래스 리펙토링 
 
-17. battleinfomation 클래스 리펙토링
+17. battleinfomation 클래스 리펙토링 
 
 18. accountinfoclass 리펙토링
 
@@ -175,6 +187,7 @@ protocoll  -> 프라우드 넷에서 생성된 파일 만 기록
 
                     Destroy(obj);
                 });
+31. 서버의 로그인 세션키와 , hostid 매칭 하기
 
 
 
