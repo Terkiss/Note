@@ -57,9 +57,11 @@ top priority todo
     Command[] com = {command("물리"),command("마법"),command("전체"),command("전체"),command("마법"),command("물리"),command("마법")}
 
 
+home 파일 변경
+resource폴더
+scripts 폴더 
 
-
-레이드의 순서 -> 추후에 변경 여지가 있다면 싱글도 바꿔야함 공격 명령 command도 변경이 필요함 
+클라이언트 레이드의 순서 -> 추후에 변경 여지가 있다면 싱글도 바꿔야함 공격 명령 command도 변경이 필요함 
 1. 멀티 플레이 를 누름 5인 레이드 선택  --> ok
 2. 매치 메이킹 시작 --> ok
 3. 5인의 방들중에 랜덤 입장 --> ok
@@ -101,7 +103,7 @@ top priority todo
      -> chrId , chrName을 둘다 받음  기본적으로 마스터 클라이언트 검사는 게속함 
 4. 처리
 5. 결과를 리턴 
-
+6. 해당 레이드가 종료 될경우 방을 청소
 
 
 
