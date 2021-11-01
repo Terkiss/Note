@@ -57,9 +57,6 @@ top priority todo
     Command[] com = {command("물리"),command("마법"),command("전체"),command("전체"),command("마법"),command("물리"),command("마법")}
 
 
-home 파일 변경
-resource폴더
-scripts 폴더 
 
 클라이언트 레이드의 순서 -> 추후에 변경 여지가 있다면 싱글도 바꿔야함 공격 명령 command도 변경이 필요함 
 1. 멀티 플레이 를 누름 5인 레이드 선택  --> ok
