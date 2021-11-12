@@ -170,7 +170,7 @@ When you have time
 
 21. ObjectGenerator 리펙토링  필요 불 필요한 부분 발견  11월 14일 예정
 
-22. 전투에서의 데미지 판정 함수 리펙토링    -> 클라에서 처리를 안하고 서버에 처리 
+22. 전투에서의 데미지 판정 함수 리펙토링    -> 클라에서 처리를 안하고 서버에 처리 ---> ok
 
 23. 전투시 이펙트 fx 대한 오브젝트 풀 구성 필요 -> 추가 고려 
 
@@ -253,6 +253,18 @@ protocoll  -> 프라우드 넷에서 생성된 파일 만 기록
 
 36. 타이틀 왼쪽 화면으로 카메라 패스 이동 
 
+37. groupInfo -> 내 전투 관련 내용을 별도의 클래스로 추출
+    예)
+        BattleInfo or BaseBattle
+        BaseBattle -> RaidBattle
+            |-> PvPBattle
+        상위 클래스에서 필요한 함수를 abstrat 형식으로 해놓고
+        파생 클래스에서 전부 구현
+
+        groupInfo는 상위 baseBattle 클래스의 메서드를 호출하면 하위의 파생 클래스의 오버라이드 된 
+        메서드 들이 호출 됨
+
+        생성자만 잘 관리 하면됨니다.
 
 
 Slungel`s Project TodoList -> complete
