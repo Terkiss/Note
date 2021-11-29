@@ -33,7 +33,7 @@ AUTO_INCREMENT=16
 ;
 
 
-캐릭터 공격 정보 테이블
+캐릭터 공격 정보 테이블(임시)
 CREATE TABLE `character_attack_info` (
 	`_id` INT(11) NOT NULL AUTO_INCREMENT,
 	`chr_ID` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
@@ -47,6 +47,9 @@ COLLATE='utf8mb4_general_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=29
 ;
+
+캐릭터 공격 정보 테이블(예정)
+
 
 
 
@@ -250,53 +253,53 @@ CompositionB -> 혼합러
 991 ~ 999 -> Tear 99스킬
 
 skill
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000000000", "RANGE", "MAGIC_THUNDER", "0",       "0",       "1.5",       "BarrageArrowHoly",      "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000001000", "MEELE",     "PHYSICS",    "5",      "0",       "1.5",         "FX_SwordSlash_01",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000002000", "RANGE",  "MAGIC",  "10",      "0",       "1.5",         "FX_Fireball_Shooting_Straight_01",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000003000", "MEELE",     "PHYSICS",    "10",      "0",       "1.5",         "FX_SwordSlash_01",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000004000", "MEELE",     "PHYSICS",    "10",      "0",       "1.5",         "CritSpikeExplosionPurple",     "",         "",             "");
 
 
 skill -> 플레이어 특수 공격 -> 마지막 스킬 번호
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000000010", "MEELE",     "MAGIC_HEAL",    "0",      "0",       "1.5",         "HealOnce",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000001010", "MEELE",     "PHYSICS_PIERCING",    "10",      "0",       "1.5",         "SwordImpactEpicGold",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000002010", "PARTY",     "MAGIC_MULTIPLY",    "0.5",      "0",       "2.5",         "GroundSlamBlue",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000003010", "MEELE",     "PHYSICS",    "15",      "0",       "1.5",         "StoneExplosion",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000004010", "MEELE",     "PHYSICS_FATALBLESSING",    "10",      "40",       "1.5",         "CritSpikeExplosionPurple",    "",         "",             "");
 
 
 skill -> 플레이어 특수 공격 -> Tear 3
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000000030", "PARTY",     "MAGIC_HEAL_MULTIPLY",    "0.5",      "0",       "2.5",         "FX_RainbowSparkle_01",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000001030", "PARTY",     "PHYSICS_MULTIPLY",    "0.5",      "0",       "2.5",         "SwordVolleyGold 3 3 3 ",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000002030", "PARTY",     "MAGIC_MULTIPLY",    "0.5",      "0",       "2.5",         "BarrageShell",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000003030", "MEELE",     "PHYSICS",    "30",      "0",       "1.5",         "CleaveStone",    "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("000004030", "MEELE",     "PHYSICS_FATALBLESSING",    "15",      "50",       "1.5",         "SkullExplosionYellow 4 4 4",    "",         "",             "");
 
 
@@ -323,44 +326,44 @@ insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, s
 
 일반 스킬
 일반 몬스터
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("001000000", "MEELE", "PHYSICS", "2",       "0",       "1.5",       "FX_SwordSlash_01",      "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("001000100", "MEELE", "PHYSICS", "3",       "0",       "1.5",       "FX_SwordSlash_01",      "",         "",             "");       
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("001000200", "MEELE", "MAGIC", "2",       "0",       "1.5",       "BloodDebuff",      "",         "",             "");       
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("001000300", "MEELE", "PHYSICS", "3",       "0",       "1.5",       "AcidExplosion",      "",         "",             "");                     
 
 강화 몬스터
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("002000000", "MEELE", "PHYSICS", "5",       "0",       "1.5",       "ChainTargetFire",      "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("002000100", "MEELE", "PHYSICS", "5",       "0",       "1.5",       "ChainTargetFire",      "",         "",             "");       
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("002000200", "MEELE", "MAGIC", "2",       "0",       "1.5",       "BarrageArrowShadow",      "",         "",             "");       
 
 
 
 보스 몬스터
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000000", "MEELE", "PHYSICS", "5",       "0",       "1.5",       "FX_ShardRock_Explosion_01",      "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000100", "MEELE", "MAGIC", "5",       "0",       "1.5",       "FX_ShardMagic_Explosion_01",      "",         "",             "");       
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000200", "MEELE", "PHYSICS", "5",       "0",       "1.5",       "FX_ShardVine_Shooting_01",      "",         "",             "");     
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000300", "MEELE", "MAGIC", "5",       "0",       "1.5",       "ShadowPurpleExplosion",      "",         "",             ""); 
                       
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000400", "MEELE", "PHYSICS", "5",       "0",       "1.5",       "CleaveDark",      "",         "",             ""); 
 
 
@@ -372,49 +375,142 @@ insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, s
 
 
 몬스터 특수 공격 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("001000001", "MEELE", "PHYSICS", "4",       "0",       "1.5",       "CritSpikeExplosionRed",      "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("001000101", "MEELE", "PHYSICS", "5",       "0",       "1.5",       "CritSpikeExplosionRed",      "",         "",             "");       
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("001000201", "PARTY", "MAGIC", "-15",       "0",       "1.5",       "DamageAuraShadow",      "",         "",             "");       
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("001000301", "MEELE", "PHYSICS", "3",       "0",       "1.5",       "FX_Fire_Explosion_01",      "",         "",             "");                     
 
 
 
 강화 몬스터
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("002000001", "PARTY", "PHYSICS", "5",       "0",       "2.5",       "FX_ShardRock_Explosion_01",      "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("002000101", "MEELE", "PHYSICS", "5",       "0",       "1.5",       "BarrageArrowShadow",      "",         "",             "");       
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("002000201", "PARTY", "MAGIC", "2",       "0",       "2.5",       "DeathFire",      "",         "",             "");       
 
 
 보스 몬스터
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000001", "MEELE", "PHYSICS", "15",       "0",       "1.5",       "FX_GroundCrack_Blast_01",      "",         "",             ""); 
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000101", "PARTY", "PHYSICS", "-10",       "0",       "2.5",       "SpikeWaveSapphire",      "",         "",             "");       
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000201", "PARTY", "PHYSICS", "-10",       "0",       "2.5",       "SpikeWaveStoneBig",      "",         "",             "");     
 
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000301", "PARTY", "MAGIC", "5",       "0",       "1.5",       "DeathAcid",      "",         "",             ""); 
                       
-insert into 'skills'(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
+insert into skills(skillNumID, skillType, attackProperty, damage, subDamage, skillRunDuration, attackFXSlot1, attackFXSlot2, attackFXSlot3, attackFXSlot4) values
                     ("003000401", "PARTY", "PHYSICS", "5",       "0",       "1.5",       "FX_Explosion_Large_Dark_01",      "",         "",             ""); 
 
 
 
  
+
+
+
+
+
+
+
+
+
+skilldetailinfotbl -> 유저기준 티어3 특수 기술
+
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("000000030", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("000001030", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("000002030", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("000003030", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("000004030", "", "뒤틀린 황천의 의상");
+
+
+
+
+
+
+skilldetailinfotbl -> 몬스터 기준 일반 기술
+
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("001000000", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("001000100", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("001000200", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("001000300", "", "뒤틀린 황천의 의상");
+
+강화몹
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("002000000", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("002000100", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("002000200", "", "뒤틀린 황천의 의상");
+
+보스 몹
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000000", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000100", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000200", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000300", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000400", "", "뒤틀린 황천의 의상");
+
+
+
+
+특수 기술
+
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("001000001", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("001000101", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("001000201", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("001000301", "", "뒤틀린 황천의 의상");
+
+
+
+
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("002000001", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("002000101", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("002000201", "", "뒤틀린 황천의 의상");
+
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000001", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000101", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000201", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000301", "", "뒤틀린 황천의 의상");
+insert into skilldetailinfotbl(skillNumID, name, description) values
+				("003000401", "", "뒤틀린 황천의 의상");
+
 
 
