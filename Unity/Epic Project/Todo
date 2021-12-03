@@ -268,6 +268,24 @@
 
 
     39. 몬스터 데미지 표시 
+
+    40. 서버 쪽 불 필요한 데이터 베이스 끈어내기
+        -sessionKeyLogin() - loginController
+        -isMember() - loginController
+        
+        -mailboxLoad() -MailBoxControll 
+            Servermemory의 accountInfo 클레스에 통합
+            -> 통합후 파일 관리 -
+        -MailBoxIndexUpdate - MailBoxControll
+        -RequestMailBoxRead -MailBoxControll
+            데이터 베이스 끈어내기
+
+        - 회원 가입 로직쪽은 어쩔수 없는듯
+        -> 여기는 살려 두도록 함
+
+    41. requstAccountSign() - ResisterControll  암호화 처리 필요
+
+
 #endregion
 
 
