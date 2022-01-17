@@ -23,3 +23,9 @@ INNER JOIN skilldetailinfotbl detail ON chrINfo.skillNumID = detail.skillNumID I
 SELECT detail.name, detail.description, s.skillType, s.attackProperty, s.damage, s.subDamage, 
 s.skillRunDuration, s.soundFX, s.attackFXSlot1, s.attackFXSlot2, s.attackFXSlot3, s.attackFXSlot4 FROM character_skill_info chrINfo 
 INNER JOIN skilldetailinfotbl detail ON chrINfo.skillNumID = detail.skillNumID INNER JOIN skills s ON detail.skillNumID = s.skillNumID where chrINfo.chrid = "";
+
+
+
+// 랭킹 sql 
+
+select gameid as accountID,  potenAverage as potentialAVG, rank() over(order by potenAverage desc) as ranking from gameidtbl

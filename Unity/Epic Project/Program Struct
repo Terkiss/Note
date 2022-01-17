@@ -1,0 +1,15 @@
+
+
+
+1.
+앱실행 -> StartUI.ButtonUiController -> xxxloginStart();
+앱실행후 게스트 로그인, 구글 로그인, 페이스북 로그인 들의 버튼 을 눌러 로그인 합니다.
+
+
+
+
+
+
+2. 
+
+

@@ -13,3 +13,10 @@ FROM `session`            -- 중복조사를 할 테이블 이름
 GROUP BY sessionKey      -- 중복되는 항목 조사를 할 컬럼
 HAVING COUNT(sessionKey) > 1 ;  -- 1개 이상 (갯수)
 
+
+auto AUTO_INCREMENT 초기화 재정렬
+ALTER TABLE '테이블네임' AUTO_INCREMENT=1; 
+SET @COUNT = 0; 
+UPDATE '테이블네임' SET '테이블네임'.'컬럼네임' = @COUNT:=@COUNT+1;
+
+delete from 테이블 where 조건 = 조건 

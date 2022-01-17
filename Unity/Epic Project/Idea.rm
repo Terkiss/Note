@@ -5,3 +5,13 @@
 
 
 
+스킬 타격 이펙트를 테이크-> 데미지 애니메이션의 이벤트 콜백으로 재생 시켜보자 
+
+
+스카이박스 변경 
+
+포텐셜 -> Cartoon_SunSetLightClouds Equirect
+상점 스카이박스 -> Sky_Cartoon_FluffyBlueSky Equirect
+싱글 선택 -> Sky_Cartoon_FluffyBlueSky Equirect
+pvp 선택 -> Sky_Cartoon_FluffyBlueSky Equirect
+레이드 -> Cartoon_FluffyBlueSky
